@@ -1,19 +1,13 @@
 //
-//  ViewController.swift
+//  QuizBrain.swift
 //  Quiizz
 //
-//  Created by Александр Вихарев on 11.04.2023.
+//  Created by Александр Вихарев on 13.04.2023.
 //
 
-import UIKit
+import Foundation
 
-class ViewController: UIViewController {
-    
-    @IBOutlet weak var questionsLabel: UILabel!
-    @IBOutlet weak var progressBar: UIProgressView!
-    @IBOutlet weak var trueButton: UIButton!
-    @IBOutlet weak var falseButton: UIButton!
-    
+struct QuizBrain {
     let quizz = [
         Question(q: "Строительство Эйфелевой башни было завершено 31 марта 1887 года.", a: "Ложь"),
         Question(q: "Молнию можно увидеть раньше, чем услышать, потому что свет распространяется быстрее звука.", a: "Правда"),
@@ -38,64 +32,36 @@ class ViewController: UIViewController {
     
     var questionNumber = 0
     
-    var timer = Timer()
-    
-  
-    
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        updateUI()
+    func checkAnswer(answer userAnswer: String) -> Bool {
+        if userAnswer == quizz[questionNumber].answer {
+            return true
+        } else {
+            return false
+        }
         
-        progressBar.progress = Float(questionNumber)
+    }
+    
+    func getQuetionText() -> String {
+        return quizz[questionNumber].text
+
+        
+    }
+    
+    func getProgress() -> Float{
+        return Float(questionNumber + 1 )/Float(quizz.count)
+        
     }
     
     
     
-    @IBAction func answerButtonPassed(_ sender: UIButton) {
-        
-        let userAnswer = sender.currentTitle
-        let actualAnswer = quizz[questionNumber].answer
-        
+    mutating func nextQuestion(){
         if questionNumber + 1 < quizz.count {
             questionNumber += 1
-            
         } else {
             questionNumber = 0
         }
         
-        if userAnswer == actualAnswer {
-            sender.backgroundColor = .green
-            
-        } else {
-            sender.backgroundColor = .red
-            
-        }
-        timer = Timer.scheduledTimer(withTimeInterval: 0.5, repeats: false) {_ in
-            self.updateUI()
-        }
-    }
-    
-    func updateUI(){
-        questionsLabel.text = quizz[questionNumber].text
-        trueButton.backgroundColor = .black
-        trueButton.tintColor = .white
-        trueButton.layer.cornerRadius = 20
-        
-        falseButton.backgroundColor = .black
-        falseButton.tintColor = .white
-        falseButton.layer.cornerRadius = 20
-         
-        progressBar.progress = Float(questionNumber + 1 )/Float(quizz.count)
-        
-        
     }
     
 }
-
-
-
-
-
-
 
