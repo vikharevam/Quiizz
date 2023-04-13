@@ -12,8 +12,8 @@ import AVFoundation
 var player: AVAudioPlayer?
 
 
-let soundRight = "sfx-5"
-let soundWrong = "NoNoNo"
+let soundRight = "apple-pay-succes"
+let soundWrong = "block_sound"
 
 func playSound(nameSound: String?) {
     guard let path = Bundle.main.path(forResource: nameSound, ofType:"mp3") else {
