@@ -11,6 +11,8 @@
 		950DEC2029E84F9E009CD6DC /* MediaController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950DEC1F29E84F9E009CD6DC /* MediaController.swift */; };
 		950DEC2329E85024009CD6DC /* NoNoNo.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 950DEC2129E85024009CD6DC /* NoNoNo.mp3 */; };
 		950DEC2429E85024009CD6DC /* sfx-5.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 950DEC2229E85024009CD6DC /* sfx-5.mp3 */; };
+		950DEC2829E852B5009CD6DC /* apple-pay-succes.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 950DEC2629E852B5009CD6DC /* apple-pay-succes.mp3 */; };
+		950DEC2929E852B5009CD6DC /* block_sound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 950DEC2729E852B5009CD6DC /* block_sound.mp3 */; };
 		958BE6A429E55F6900F2B893 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 958BE6A329E55F6900F2B893 /* AppDelegate.swift */; };
 		958BE6A629E55F6900F2B893 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 958BE6A529E55F6900F2B893 /* SceneDelegate.swift */; };
 		958BE6A829E55F6900F2B893 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 958BE6A729E55F6900F2B893 /* ViewController.swift */; };
@@ -25,7 +27,9 @@
 		950DEC1F29E84F9E009CD6DC /* MediaController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaController.swift; sourceTree = "<group>"; };
 		950DEC2129E85024009CD6DC /* NoNoNo.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = NoNoNo.mp3; sourceTree = "<group>"; };
 		950DEC2229E85024009CD6DC /* sfx-5.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "sfx-5.mp3"; sourceTree = "<group>"; };
-		958BE6A029E55F6900F2B893 /* Quiizz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Quiizz.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		950DEC2629E852B5009CD6DC /* apple-pay-succes.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "apple-pay-succes.mp3"; sourceTree = "<group>"; };
+		950DEC2729E852B5009CD6DC /* block_sound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = block_sound.mp3; sourceTree = "<group>"; };
+		958BE6A029E55F6900F2B893 /* Quiizz2.0.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Quiizz2.0.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		958BE6A329E55F6900F2B893 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		958BE6A529E55F6900F2B893 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		958BE6A729E55F6900F2B893 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; wrapsLines = 1; };
@@ -50,6 +54,8 @@
 		950DEC2529E8502F009CD6DC /* Sound */ = {
 			isa = PBXGroup;
 			children = (
+				950DEC2629E852B5009CD6DC /* apple-pay-succes.mp3 */,
+				950DEC2729E852B5009CD6DC /* block_sound.mp3 */,
 				950DEC2229E85024009CD6DC /* sfx-5.mp3 */,
 				950DEC2129E85024009CD6DC /* NoNoNo.mp3 */,
 			);
@@ -67,7 +73,7 @@
 		958BE6A129E55F6900F2B893 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				958BE6A029E55F6900F2B893 /* Quiizz.app */,
+				958BE6A029E55F6900F2B893 /* Quiizz2.0.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -117,9 +123,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		958BE69F29E55F6900F2B893 /* Quiizz */ = {
+		958BE69F29E55F6900F2B893 /* Quiizz2.0 */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 958BE6B429E55F6C00F2B893 /* Build configuration list for PBXNativeTarget "Quiizz" */;
+			buildConfigurationList = 958BE6B429E55F6C00F2B893 /* Build configuration list for PBXNativeTarget "Quiizz2.0" */;
 			buildPhases = (
 				958BE69C29E55F6900F2B893 /* Sources */,
 				958BE69D29E55F6900F2B893 /* Frameworks */,
@@ -129,9 +135,9 @@
 			);
 			dependencies = (
 			);
-			name = Quiizz;
+			name = Quiizz2.0;
 			productName = Quiizz;
-			productReference = 958BE6A029E55F6900F2B893 /* Quiizz.app */;
+			productReference = 958BE6A029E55F6900F2B893 /* Quiizz2.0.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -149,7 +155,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 958BE69B29E55F6900F2B893 /* Build configuration list for PBXProject "Quiizz" */;
+			buildConfigurationList = 958BE69B29E55F6900F2B893 /* Build configuration list for PBXProject "Quiizz2.0" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -162,7 +168,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				958BE69F29E55F6900F2B893 /* Quiizz */,
+				958BE69F29E55F6900F2B893 /* Quiizz2.0 */,
 			);
 		};
 /* End PBXProject section */
@@ -176,7 +182,9 @@
 				958BE6AD29E55F6C00F2B893 /* Assets.xcassets in Resources */,
 				958BE6AB29E55F6900F2B893 /* Main.storyboard in Resources */,
 				950DEC2429E85024009CD6DC /* sfx-5.mp3 in Resources */,
+				950DEC2829E852B5009CD6DC /* apple-pay-succes.mp3 in Resources */,
 				950DEC2329E85024009CD6DC /* NoNoNo.mp3 in Resources */,
+				950DEC2929E852B5009CD6DC /* block_sound.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -342,6 +350,7 @@
 				DEVELOPMENT_TEAM = 4U82GRW2BP;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Quiizz/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.games";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -370,6 +379,7 @@
 				DEVELOPMENT_TEAM = 4U82GRW2BP;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Quiizz/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.games";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -391,7 +401,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		958BE69B29E55F6900F2B893 /* Build configuration list for PBXProject "Quiizz" */ = {
+		958BE69B29E55F6900F2B893 /* Build configuration list for PBXProject "Quiizz2.0" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				958BE6B229E55F6C00F2B893 /* Debug */,
@@ -400,7 +410,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		958BE6B429E55F6C00F2B893 /* Build configuration list for PBXNativeTarget "Quiizz" */ = {
+		958BE6B429E55F6C00F2B893 /* Build configuration list for PBXNativeTarget "Quiizz2.0" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				958BE6B529E55F6C00F2B893 /* Debug */,
