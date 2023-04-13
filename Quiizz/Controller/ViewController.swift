@@ -7,12 +7,15 @@
 
 import UIKit
 
+
 class ViewController: UIViewController {
     
+    @IBOutlet weak var scoreTitle: UILabel!
     @IBOutlet weak var questionsLabel: UILabel!
     @IBOutlet weak var progressBar: UIProgressView!
-    @IBOutlet weak var trueButton: UIButton!
-    @IBOutlet weak var falseButton: UIButton!
+    @IBOutlet weak var choiceOne: UIButton!
+    @IBOutlet weak var choiceTwo: UIButton!
+    @IBOutlet weak var choiceTree: UIButton!
     
     
     var quizBrain = QuizBrain()
@@ -41,11 +44,11 @@ class ViewController: UIViewController {
         
         
         if userGotItRight {
+            playSound(nameSound: soundRight)
             sender.backgroundColor = .green
-            
         } else {
+            playSound(nameSound: soundWrong)
             sender.backgroundColor = .red
-            
         }
         timer = Timer.scheduledTimer(withTimeInterval: 0.5, repeats: false) {_ in
             self.updateUI()
@@ -54,14 +57,26 @@ class ViewController: UIViewController {
     
     func updateUI(){
         questionsLabel.text = quizBrain.getQuetionText()
-        trueButton.backgroundColor = .black
-        trueButton.tintColor = .white
-        trueButton.layer.cornerRadius = 20
         
-        falseButton.backgroundColor = .black
-        falseButton.tintColor = .white
-        falseButton.layer.cornerRadius = 20
+        let answerChoice = quizBrain.getAnswer()
+        
+        
+        choiceOne.backgroundColor = .black
+        choiceOne.tintColor = .white
+        choiceOne.layer.cornerRadius = 20
+        choiceOne.setTitle(answerChoice[0], for: .normal)
+        
+        choiceTwo.backgroundColor = .black
+        choiceTwo.tintColor = .white
+        choiceTwo.layer.cornerRadius = 20
+        choiceTwo.setTitle(answerChoice[1], for: .normal)
+        
+        choiceTree.backgroundColor = .black
+        choiceTree.tintColor = .white
+        choiceTree.layer.cornerRadius = 20
+        choiceTree.setTitle(answerChoice[2], for: .normal)
          
+        scoreTitle.text = quizBrain.getScore()
         progressBar.progress = quizBrain.getProgress()
         
         
